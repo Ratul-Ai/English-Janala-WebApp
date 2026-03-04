@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth scroll-pt-25">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>English Janala</title>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+
+    <!--/ Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--/ Tailwind + DaisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!--/ Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--/ Custom CSS -->
+    <style>
+      * {
+        font-family: "Poppins", sans-serif;
+      }
+      .font-bangla {
+        font-family: "Hind Siliguri", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--/ navbar  -->
+    <header class="sticky top-0 z-10">
+      <div class="navbar bg-[#eff4f9] shadow-sm">
+        <div class="w-11/12 mx-auto flex justify-between items-center">
+          <!-- Logo -->
+          <a href="#" class="flex items-center gap-1">
+            <span class="font-bold text-lg">English</span>
+            <img src="./assets/logo.png" alt="English Janala Logo" />
+            <span class="font-bold text-lg font-bangla">জানালা</span>
+          </a>
+
+          <!--! Desktop Navigation -->
+          <nav class="hidden md:flex">
+            <ul class="menu menu-horizontal gap-4">
+              <li>
+                <a href="#faq" class="btn btn-outline btn-primary"
+                  ><i class="fa-solid fa-circle-question"></i> FAQ</a
+                >
+              </li>
+              <li>
+                <a href="#lesson" class="btn btn-outline btn-primary"
+                  ><i class="fa-solid fa-book-open"></i> Learn</a
+                >
+              </li>
+              <li class="login-btn">
+                <a
+                  id="log-in-btn"
+                  href="#login-form"
+                  class="change btn btn-outline btn-primary"
+                  ><i class="fa-solid fa-arrow-right-to-bracket"></i> Log In</a
+                >
+              </li>
+              <li class="logout-btn hidden">
+                <a href="#" class="btn btn-outline btn-primary"
+                  ><i class="fa-solid fa-arrow-right-from-bracket"></i> Log
+                  Out</a
+                >
+              </li>
+              <li class="nav-user hidden">
+                <a href="#" class="btn btn-info"
+                  ><i class="fa-solid fa-user"></i><span class="user"></span
+                ></a>
+              </li>
+            </ul>
+          </nav>
+
+          <!--! Mobile Hamburger Menu -->
+          <div class="dropdown dropdown-end md:hidden">
+            <div
+              tabindex="0"
+              role="button"
+              class="btn btn-ghost"
+              aria-label="Open menu"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="-1"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-36 p-2 shadow"
+            >
+              <li class="nav-user hidden">
+                <a href="#" class=""
+                  ><i class="fa-solid fa-user"></i><span class="user"></span
+                ></a>
+              </li>
+              <li>
+                <a href="#faq"
+                  ><i class="fa-solid fa-circle-question"></i> FAQ</a
+                >
+              </li>
+              <li>
+                <a href="#lesson"
+                  ><i class="fa-solid fa-book-open"></i> Learn</a
+                >
+              </li>
+              <li class="login-btn">
+                <a href="#login-form" class=" "
+                  ><i class="fa-solid fa-arrow-right-to-bracket"></i> Log In</a
+                >
+              </li>
+              <li class="logout-btn hidden">
+                <a href="#" class=""
+                  ><i class="fa-solid fa-arrow-right-from-bracket"></i> Log
+                  Out</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--/ hero  -->
+    <section id="hero" class="w-11/12 mx-auto">
+      <div
+        class="flex flex-col-reverse md:flex-row justify-center items-center gap-12"
+      >
+        <!--! Hero Text -->
+        <div class="text-center md:text-left flex-1 space-y-6">
+          <h1 class="text-4xl font-bold">
+            <span class="text-sky-500">English</span> is Easy!!
+          </h1>
+          <p class="font-bangla">
+            আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
+            আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে
+            যাবে অন্য একটি Level এ।
+          </p>
+          <!--!  Login Form  -->
+          <form
+            id="login-form"
+            class="flex flex-col items-center md:items-start gap-2 w-2/3 mx-auto md:mx-0"
+          >
+            <input
+              id="username"
+              class="w-full px-4 py-2 border border-slate-300 rounded-lg"
+              type="text"
+              maxlength="10"
+              minlength="1"
+              placeholder="Enter Your Name"
+              autocomplete="username"
+              required
+            />
+            <input
+              id="password"
+              class="w-full px-4 py-2 border border-slate-300 rounded-lg"
+              type="password"
+              maxlength="8"
+              minlength="4"
+              placeholder="Enter Your Password"
+              autocomplete="current-password"
+              required
+            />
+            <p id="form-error" class="text-sm hidden text-red-500">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              Please enter your name and password.
+            </p>
+            <button id="submit-btn" type="submit" class="btn btn-primary mt-2">
+              Get Started
+            </button>
+          </form>
+          <!--! welcome msg  -->
+          <div id="login-msg" class="hidden">
+            <h2 class="text-2xl font-bold">
+              Welcome <span class="user text-sky-500"></span>
+            </h2>
+          </div>
+        </div>
+
+        <!--! Hero Image -->
+        <div class="flex-1">
+          <img src="./assets/hero-student.png" alt="Student learning English" />
+        </div>
+      </div>
+    </section>
+
+    <!--/ lesson section  -->
+    <section id="lesson" class="w-11/12 mx-auto my-20 md:my-40">
+      <div class="flex flex-col items-center justify-center gap-6">
+        <h2 class="text-3xl font-bold">
+          <span class="text-sky-500">Let's</span> Learn Vocabularies
+        </h2>
+
+        <!--! Lesson Buttons -->
+        <div
+          id="lesson-btns"
+          class="gap-2 flex flex-wrap justify-center items-center"
+        ></div>
+
+        <!--! Spinner for lesson buttons loading -->
+        <div id="spin1" class="hidden">
+          <span class="loading loading-spinner text-primary"></span>
+        </div>
+
+        <!--! Search + Save Row -->
+        <div class="w-full flex justify-between sm:justify-around items-center">
+          <div class="join">
+            <input
+              id="search-input"
+              class="input"
+              maxlength="20"
+              type="text"
+              placeholder="Search a word"
+            />
+            <button
+              id="btn-search"
+              onclick="highlight('btn-search')"
+              class="btn btn-primary"
+            >
+              Search
+            </button>
+          </div>
+          <button
+            id="saved"
+            onclick="highlight('saved')"
+            class="btn btn-outline btn-primary change"
+          >
+            <i class="fa-solid fa-bookmark"></i> saved
+          </button>
+        </div>
+        <!--! Error msg  -->
+        <div
+          id="error-msg"
+          class="hidden w-full text-center py-4 px-6 bg-red-50 border border-red-200 rounded-lg text-red-700"
+          role="alert"
+        >
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <span id="error-text">Something went wrong. Please try again.</span>
+        </div>
+        <!--! Spinner for cards loading -->
+        <div id="spin2" class="hidden">
+          <span class="loading loading-spinner text-primary"></span>
+        </div>
+
+        <!--! Vocabulary Cards Grid -->
+        <div
+          id="cards"
+          class="text-center py-8 px-4 bg-slate-200 rounded-lg w-full grid grid-cols-1 md:grid-cols-3 gap-4"
+        >
+          <div class="col-span-full">
+            <p class="font-bangla text-black/60 mb-2">
+              আপনি এখনো কোন Lesson Select করেন নি
+            </p>
+            <h2 class="font-bangla text-3xl">একটি Lesson Select করুন।</h2>
+          </div>
+        </div>
+
+        <!--! Word Detail Modal -->
+        <dialog id="details_modal" class="modal modal-bottom sm:modal-middle">
+          <div class="modal-box">
+            <div id="modal-spinner" class="flex justify-center p-20 hidden">
+              <span class="loading loading-dots loading-xl"></span>
+            </div>
+            <div id="details-box" class="space-y-5"></div>
+            <div class="modal-action">
+              <form method="dialog">
+                <button class="btn btn-primary">Close</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+      </div>
+    </section>
+
+    <!--/ FAQ section -->
+    <section id="faq" class="w-11/12 mx-auto my-20 md:my-40 space-y-10">
+      <h2 class="text-3xl text-center font-bold">
+        <span class="text-sky-500">Frequently</span> Asked Questions
+      </h2>
+      <div class="space-y-4">
+        <details
+          class="group border border-base-200 bg-slate-100 rounded-lg p-4"
+        >
+          <summary
+            class="flex justify-between items-center cursor-pointer font-semibold"
+          >
+            1. How can I start learning English on this website?
+            <span
+              class="ml-2 transition-transform duration-200 group-open:rotate-45 group-open:text-red-700"
+              >+</span
+            >
+          </summary>
+          <p class="mt-2 text-sm text-black/70">
+            You can start by exploring our beginner lessons, interactive
+            exercises, and quizzes. We also offer structured courses to guide
+            you step by step.
+          </p>
+        </details>
+
+        <details
+          class="group border border-base-200 bg-slate-100 rounded-lg p-4"
+        >
+          <summary
+            class="flex justify-between items-center cursor-pointer font-semibold"
+          >
+            2. Is this website free to use?
+            <span
+              class="ml-2 transition-transform duration-200 group-open:rotate-45 group-open:text-red-700"
+              >+</span
+            >
+          </summary>
+          <p class="mt-2 text-sm text-black/70">
+            Yes, this website is completely free to use. You can access most
+            content without any payment.
+          </p>
+        </details>
+
+        <details
+          class="group border border-base-200 bg-slate-100 rounded-lg p-4"
+        >
+          <summary
+            class="flex justify-between items-center cursor-pointer font-semibold"
+          >
+            3. Do I need to create an account?
+            <span
+              class="ml-2 transition-transform duration-200 group-open:rotate-45 group-open:text-red-700"
+              >+</span
+            >
+          </summary>
+          <p class="mt-2 text-sm text-black/70">
+            No, creating an account is optional. Signing up lets you track
+            progress and save your work.
+          </p>
+        </details>
+
+        <details
+          class="group border border-base-200 bg-slate-100 rounded-lg p-4"
+        >
+          <summary
+            class="flex justify-between items-center cursor-pointer font-semibold"
+          >
+            4. How can I build my English vocabulary?
+            <span
+              class="ml-2 transition-transform duration-200 group-open:rotate-45 group-open:text-red-700"
+              >+</span
+            >
+          </summary>
+          <p class="mt-2 text-sm text-black/70">
+            Build your English vocabulary by reading regularly and practicing
+            daily. Using flashcards, apps, or writing exercises can speed up
+            learning.
+          </p>
+        </details>
+
+        <details
+          class="group border border-base-200 bg-slate-100 rounded-lg p-4"
+        >
+          <summary
+            class="flex justify-between items-center cursor-pointer font-semibold"
+          >
+            5. Do you offer certificates for completed courses?
+            <span
+              class="ml-2 transition-transform duration-200 group-open:rotate-45 group-open:text-red-700"
+              >+</span
+            >
+          </summary>
+          <p class="mt-2 text-sm text-black/70">
+            Some courses offer certificates upon completion. These certificates
+            can be downloaded or shared online.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <!--/ footer  -->
+    <footer
+      class="footer sm:footer-horizontal border-t border-slate-500 bg-slate-50 p-10"
+    >
+      <div
+        class="w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center"
+      >
+        <aside
+          class="flex flex-col justify-center items-center md:items-start gap-4"
+        >
+          <a class="flex items-center gap-1">
+            <span class="font-bold text-lg">English</span>
+            <img src="./assets/logo.png" alt="English Janala Logo" />
+            <span class="font-bold text-lg font-bangla">জানালা</span>
+          </a>
+          <div class="text-center md:text-left space-y-1">
+            <p class="font-bangla text-lg">ইংরেজি শিখুন সহজে</p>
+            <p class="text-sm">Providing ED-Tech Applications since 2025</p>
+          </div>
+        </aside>
+        <div class="mt-5 md:mt-0">
+          <h6 class="footer-title">Follow Us</h6>
+          <div class="grid grid-flow-col gap-2">
+            <a href="#" aria-label="Facebook"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="#" aria-label="YouTube"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--/ JavaScript -->
+    <script src="./script.js"></script>
+  </body>
+</html>
