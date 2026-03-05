@@ -48,6 +48,8 @@ I also learned that doing unnecessary work can slow things down. So after fetchi
 While building the project, I also discovered a few smaller but useful things. I learned about the native HTML `<details>` tag and used it to build the FAQ section, which allowed me to add expand/collapse behavior without writing any JavaScript.
 
 I also realized that smooth scrolling navigation is surprisingly simple — just linking navbar items with `#section-id` and adding `scroll-smooth` to the `html` element.These are Small things, but satisfying.
+
+
 ---
 
 ## ⚙️ Challenges I ran into
