@@ -27,21 +27,27 @@ A simple vocabulary learning app for Bengali speakers to explore English words �
 - Hear the word pronounced using the browser's Speech API  
 - Save/unsave words and view them anytime in a saved list  
 - Simple login flow with form validation  
-- Loading spinners and error messages for a better experience  
+- Loading spinners and error messages for a better experience 
+- FAQ section with expand/collapse behavior 
 - Fully responsive — works on mobile and desktop  
 
 ---
 
 ## 📚 What I learned & how I applied it here
 
-This week I focused on three things — **DOM manipulation**, **API integration**, and **asynchronous data fetching** — and this project is where I put all of that into practice.
+This week I focused on three main things — **DOM manipulation**, **API integration**, and **asynchronous data fetching** — and this project is where I tried to apply everything I learned.
 
-I connected to a real external API to load lesson levels, vocabulary words, and word details. Instead of hardcoding anything, all the content on the page is fetched and rendered dynamically using `fetch` and `async/await`. The lesson buttons, vocabulary cards, and even the modal content are all built from API responses at runtime.
+Instead of hardcoding data, I connected the app to a real external API to load lesson levels, vocabulary words, and word details. All of the content on the page is fetched dynamically using `fetch` and `async/await`, and then rendered into the UI.
 
-For DOM manipulation, I used JavaScript to create and update elements on the fly — rendering cards, toggling classes, showing and hiding sections, and updating the UI without ever reloading the page. Things like the active lesson highlight, the login/logout flow, and the save button all update instantly based on what the user does.
+The lesson buttons, vocabulary cards, and modal content are all generated from API responses at runtime.
 
-I also learned the importance of not doing unnecessary work — so once the full word list is fetched for search, it gets cached in a state object and reused instead of re-fetching every time.
+For **DOM manipulation**, I used JavaScript to dynamically create and update elements — rendering cards, toggling classes, showing and hiding sections, and updating the interface without reloading the page. Features like the active lesson highlight, the login/logout flow, and the save button all update instantly based on user actions.
 
+I also learned that doing unnecessary work can slow things down. So after fetching the full word list once for search, I stored it in a state object and reused it instead of fetching it again every time.
+
+While building the project, I also discovered a few smaller but useful things. I learned about the native HTML `<details>` tag and used it to build the FAQ section, which allowed me to add expand/collapse behavior without writing any JavaScript.
+
+I also realized that smooth scrolling navigation is surprisingly simple — just linking navbar items with `#section-id` and adding `scroll-smooth` to the `html` element.These are Small things, but satisfying.
 ---
 
 ## ⚙️ Challenges I ran into
