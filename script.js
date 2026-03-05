@@ -275,10 +275,12 @@ const pronounceWord = (word) => {
 /// Search button click
 document.getElementById("btn-search").addEventListener("click", async () => {
   state.isViewingSaved = false;
+
   const input = document
     .getElementById("search-input")
     .value.trim()
     .toLowerCase();
+    if(!input) return;
 
   const allWords = await loadAllWords();
 
@@ -289,7 +291,7 @@ document.getElementById("btn-search").addEventListener("click", async () => {
   );
 
   const filtered = uniqueWords.filter((word) =>
-    word.word.toLowerCase().includes(input),
+    word.word.toLowerCase().includes(input)
   );
 
   renderWords(filtered);

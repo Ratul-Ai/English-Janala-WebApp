@@ -235,7 +235,7 @@
         </div>
 
         <!--! Search + Save Row -->
-        <div class="w-full flex justify-between sm:justify-around items-center">
+        <div class="w-full flex justify-between sm:justify-around gap-2 items-center">
           <div class="join">
             <input
               id="search-input"
@@ -249,7 +249,7 @@
               onclick="highlight('btn-search')"
               class="btn btn-primary"
             >
-              Search
+              <i class="fa-solid fa-magnifying-glass"></i><span class="hidden sm:block">Search</span>
             </button>
           </div>
           <button
@@ -257,7 +257,7 @@
             onclick="highlight('saved')"
             class="btn btn-outline btn-primary change"
           >
-            <i class="fa-solid fa-bookmark"></i> saved
+            <i class="fa-solid fa-bookmark"></i><span class="hidden sm:block">saved</span>
           </button>
         </div>
         <!--! Error msg  -->
