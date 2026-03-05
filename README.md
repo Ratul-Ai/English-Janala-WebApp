@@ -1,7 +1,7 @@
 <h1 align="center">🪟 English Janala</h1>
 
 <p align="center">
-A simple vocabulary learning app for Bengali speakers to explore English words — with meanings, pronunciations, examples, and synonyms.
+A simple vocabulary learning app for Bengali speakers to explore English words with meanings, pronunciations, examples, and synonyms.
 </p>
 
 <p align="center">
@@ -35,7 +35,7 @@ A simple vocabulary learning app for Bengali speakers to explore English words �
 
 ## 📚 What I learned & how I applied it here
 
-This week I focused on three main things — **DOM manipulation**, **API integration**, and **asynchronous data fetching** — and this project is where I tried to apply everything I learned.
+This week I focused on three main things — **DOM manipulation**, **API integration**, and **asynchronous data fetching** , and this project is where I tried to apply everything I learned.
 
 Instead of hardcoding data, I connected the app to a real external API to load lesson levels, vocabulary words, and word details. All of the content on the page is fetched dynamically using `fetch` and `async/await`, and then rendered into the UI.
 
@@ -47,18 +47,18 @@ I also learned that doing unnecessary work can slow things down. So after fetchi
 
 While building the project, I also discovered a few smaller but useful things. I learned about the native HTML `<details>` tag and used it to build the FAQ section, which allowed me to add expand/collapse behavior without writing any JavaScript.
 
-I also realized that smooth scrolling navigation is surprisingly simple — just linking navbar items with `#section-id` and adding `scroll-smooth` to the `html` element.These are Small things, but satisfying.
+I also realized that smooth scrolling navigation is surprisingly simple, just linking navbar items with `#section-id` and adding `scroll-smooth` to the `html` element.These are Small things, but satisfying.
 
 
 ---
 
 ## ⚙️ Challenges I ran into
 
-**Search showing all words on empty input** — took me a moment to realize that an empty string matches everything with `.includes()`. Fixed it with a simple early return.
+**Search showing all words on empty input**, took me a moment to realize that an empty string matches everything with `.includes()`. Fixed it with a simple early return.
 
-**Keeping the save button in sync** — when a word is unsaved from the saved list, it should disappear from the list immediately. I had to track whether the user was viewing the saved list or a lesson, and re-render accordingly.
+**Keeping the save button in sync** when a word is unsaved from the saved list, it should disappear from the list immediately. I had to track whether the user was viewing the saved list or a lesson, and re-render accordingly.
 
-**Avoiding duplicate search results** — some words appeared across multiple lessons, so I had to deduplicate before showing search results.
+**Avoiding duplicate search results**, some words appeared across multiple lessons, so I had to deduplicate before showing search results.
 
 ---
 
@@ -70,6 +70,6 @@ HTML · Tailwind CSS v4 · DaisyUI v5 · Vanilla JavaScript · Font Awesome · P
 
 ## 👨‍💻 Author
 
-**Ratul** — currently learning web development.  
+**Ratul**. Currently learning web development.  
 
 [GitHub](https://github.com/Ratul-Ai) 
