@@ -33,6 +33,14 @@ A simple vocabulary learning app for Bengali speakers to explore English words w
 
 ---
 
+## 📸 Preview
+
+| Home | Lessons | FAQ
+|-----------|-----------|-----------|
+| <img src="./screenshots/home.png" width="300"> | <img src="./screenshots/lessons.png" width="300"> |<img src="./screenshots/faq.png" width="340">|
+
+
+
 ## 📚 What I learned & how I applied it here
 
 This week I focused on three main things — **DOM manipulation**, **API integration**, and **asynchronous data fetching** , and this project is where I tried to apply everything I learned.
@@ -72,4 +80,4 @@ HTML · Tailwind CSS v4 · DaisyUI v5 · Vanilla JavaScript · Font Awesome · P
 
 **Ratul**. Currently learning web development.  
 
-[GitHub](https://github.com/Ratul-Ai) 
+[GitHub](https://github.com/Ratul-Ai) | [Linkedin](https://www.linkedin.com/in/md-ratul242/)
