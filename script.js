@@ -56,6 +56,17 @@ const hideError = () => {
   hide("error-msg");
 };
 
+/// Empty state msg
+const showEmptyState = (msg, hint) => {
+  document.getElementById("cards").innerHTML = `
+    <div class="space-y-4 col-span-full">
+      <img class="mx-auto" src="./assets/alert-error.png" alt="No words found" />
+      <p class="font-bangla text-black/60">${msg}</p>
+      <h2 class="font-bangla text-3xl">${hint}</h2>
+    </div>`;
+  setCardLoading(false);
+};
+
 //?                      Data Loading
 //! ─────────────────────────────────────────────────────────────
 
@@ -105,7 +116,14 @@ const loadWords = async (levelId) => {
   hideError();
   try {
     const words = await fetchJSON(api.level(levelId));
-    renderWords(words);
+    if (words.length === 0) {
+      showEmptyState(
+        "এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।",
+        "নেক্সট Lesson এ যান",
+      );
+    } else {
+      renderWords(words);
+    }
   } catch (error) {
     showError("Something went wrong. Please try again.");
     console.error("Failed to load words:", error);
@@ -149,17 +167,6 @@ const renderLessons = (lessons) => {
 /// displaying cards on UI
 const renderWords = (words) => {
   const container = document.getElementById("cards");
-
-  if (words.length === 0) {
-    container.innerHTML = `
-      <div class="space-y-4 col-span-full">
-        <img class="mx-auto" src="./assets/alert-error.png" alt="No words found" />
-        <p class="font-bangla text-black/60">এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।</p>
-        <h2 class="font-bangla text-3xl">নেক্সট Lesson এ যান</h2>
-      </div>`;
-    setCardLoading(false);
-    return;
-  }
 
   container.innerHTML = words
     .map((word) => {
@@ -246,7 +253,16 @@ const toggleSaveWord = async (wordId) => {
     state.savedWords.splice(existingIndex, 1);
     btn.classList.add("btn-outline");
     btn.innerHTML = `<i class="fa-regular fa-heart"></i>`;
-    if (state.isViewingSaved) renderWords(state.savedWords);
+    if (state.isViewingSaved) {
+      if (state.savedWords.length === 0) {
+        showEmptyState(
+          "আপনি এখনো কোন শব্দ সংরক্ষণ করেননি।",
+          "নতুন শব্দ যোগ করতে শব্দের পাশে Save বাটনে ক্লিক করুন",
+        );
+      } else {
+        renderWords(state.savedWords);
+      }
+    }
   } else {
     state.savedWords.unshift(word);
     btn.classList.remove("btn-outline");
@@ -280,7 +296,7 @@ document.getElementById("btn-search").addEventListener("click", async () => {
     .getElementById("search-input")
     .value.trim()
     .toLowerCase();
-    if(!input) return;
+  if (!input) return;
 
   const allWords = await loadAllWords();
 
@@ -291,16 +307,31 @@ document.getElementById("btn-search").addEventListener("click", async () => {
   );
 
   const filtered = uniqueWords.filter((word) =>
-    word.word.toLowerCase().includes(input)
+    word.word.toLowerCase().includes(input),
   );
 
-  renderWords(filtered);
+  if (filtered.length === 0) {
+    showEmptyState(
+      "আপনার সার্চের সাথে কোন শব্দ মেলেনি।",
+      "অন্য কোন শব্দ দিয়ে আবার চেষ্টা করুন",
+    );
+  } else {
+    renderWords(filtered);
+  }
 });
 
 /// Saved words button click
 document.getElementById("saved").addEventListener("click", () => {
   state.isViewingSaved = true;
-  renderWords(state.savedWords);
+  if (state.savedWords.length === 0) {
+    showEmptyState(
+      "আপনি এখনো কোন শব্দ সংরক্ষণ করেননি।",
+      "নতুন শব্দ যোগ করতে শব্দের পাশে Save বাটনে ক্লিক করুন",
+      
+    );
+  } else {
+    renderWords(state.savedWords);
+  }
 });
 
 /// login btns
