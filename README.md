@@ -37,7 +37,7 @@ A simple vocabulary learning app for Bengali speakers to explore English words w
 
 | Home | Lessons | FAQ
 |-----------|-----------|-----------|
-| <img src="./screenshots/home.png" width="300"> | <img src="./screenshots/lessons.png" width="300"> |<img src="./screenshots/faq.png" width="340">|
+| <img src="./screenshots/home.png" width="300"> | <img src="./screenshots/lessons.png" width="300"> |<img src="./screenshots/faq.png" width="335">|
 
 
 
